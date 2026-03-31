@@ -13,8 +13,8 @@ const STAFF = [
 ];
 
 // ===== Supabase設定 =====
-const SB_URL = "https://hhntacvjgnsowtkofkvd.supabase.co";
-const SB_KEY = "sb_publishable_ZE99Vq5puU_WndipGMnbSQ_SZKzkFOx";
+const SB_URL = import.meta.env.VITE_SUPABASE_URL;
+const SB_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 async function sb(method, table, body, query = "") {
   const headers = {
